@@ -13,7 +13,7 @@ from .filters import UserInfoFilter
 
 
 # 用户信息的增删查改
-class UserView(viewsets.ModelViewSet):
+class UserView(viewsets.ReadOnlyModelViewSet, mixins.DestroyModelMixin):
     # 指定模型类查询集
     queryset = UserInfo.objects.all()
 

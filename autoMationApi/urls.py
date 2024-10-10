@@ -20,5 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app1/', include('app01.urls')),
+    # 配置DRF的登录功能
+    path('api_auth/', include('rest_framework.urls')),
 
 ]
