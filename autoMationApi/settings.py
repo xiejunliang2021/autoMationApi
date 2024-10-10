@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'app01',
     'rest_framework',
     # 注册过滤器
-    'django_filters'
+    'django_filters',
+    # 自动生成接口文档
+    'coreapi',
 ]
 
 MIDDLEWARE = [
@@ -156,4 +158,6 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
+    # 接口文档的配置
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
 }

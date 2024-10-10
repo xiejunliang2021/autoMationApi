@@ -13,8 +13,8 @@ from app01.models import UserInfo
 
 class UserInfoFilter(filters.FilterSet):
     """自定义过滤器类，一般过滤器为哪个模型服务就写哪个模型的filter"""
-    # min_price = filters.NumberFilter(field_name="price", lookup_expr='gte')
-    # max_price = filters.NumberFilter(field_name="price", lookup_expr='lte')
+    min_age = filters.NumberFilter(field_name="age", lookup_expr='gte')
+    max_age = filters.NumberFilter(field_name="age", lookup_expr='lte')
 
     class Meta:
         model = UserInfo
